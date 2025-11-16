@@ -258,7 +258,7 @@ async def remove_chat_command(update: Update, context: ContextTypes.DEFAULT_TYPE
             save_chat_ids(chat_ids)
             await update.message.reply_text(f"✅ Chat ID {chat_id_to_remove} successfully removed.")
         else:
-            await update.message.reply_text(f"🤔 This chat ID ({chat_id_to_remove}) was not fou
+            await update.message.reply_text(f"🤔 This chat ID {chat_id_to_remove} was not fou
             nd in the list.")
     except (IndexError, ValueError):
         await update.message.reply_text("❌ Invalid format. Use: /remove_chat <chat_id>")
