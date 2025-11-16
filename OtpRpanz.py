@@ -241,7 +241,7 @@ async def add_chat_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
             save_chat_ids(chat_ids)
             await update.message.reply_text(f"✅ Chat ID {new_chat_id} successfully added.")
         else:
-            await update.message.reply_text(f"⚠️ This chat ID ({new_chat_id}) is already in the list.")
+            await update.message.reply_text(f"⚠️ This chat ID {new_chat_id} is already in the list.")
     except (IndexError, ValueError):
         await update.message.reply_text("❌ Invalid format. Use: /add_chat <chat_id>")
 
